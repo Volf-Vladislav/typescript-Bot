@@ -1,4 +1,4 @@
-function messageTemplate(data, event, id) {
+function messageTemplate(data:any, event:string, id:string | undefined) {
     const msg = {
         data: data,
         event: event,
@@ -7,4 +7,4 @@ function messageTemplate(data, event, id) {
     return JSON.stringify(msg)
 }
 
-module.exports = messageTemplate
+export default messageTemplate
