@@ -8,7 +8,7 @@ function connectionSession(ws: Ws, targetTime: number) {
     const intervalID = setInterval(() => {
         timer++
         if (timer >= targetTime) {
-            if (ws.readyState == 1) {
+            if (ws.readyState == 1 && ws.status != 'chating') {
                 ws.status = 'chating'
                 ws.send(messageTemplate('finded', 'status', 'xxx000bot000xxx'))
 
