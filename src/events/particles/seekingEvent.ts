@@ -5,7 +5,7 @@ import connectionSession from './../../helpers/connectionSession'
 
 function seekingEvent(message: any, ws: Ws, wss: any) {
     if(ws.status != 'chating') {
-        connectionSession(ws, 1) 
+        connectionSession(ws, 16) 
     }
 
     ws.gender = message.data.gender
